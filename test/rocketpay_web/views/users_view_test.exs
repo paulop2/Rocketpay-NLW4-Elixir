@@ -8,10 +8,10 @@ defmodule RocketpayWeb.UsersViewTest do
 
   test "renders create.json" do
     params = %{
-      name: "Rafael",
-      password: "123456",
-      nickname: "camarda",
-      email: "rafael@banana.com",
+      name: "Name",
+      password: "Password",
+      nickname: "Nickname",
+      email: "email@mail.com",
       age: 27
     }
 

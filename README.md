@@ -1,25 +1,3 @@
-# Rocketpay
-
-To start your Phoenix server:
-
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
-
-  https://github.com/paulop2/Rocketpay-NLW4-Elixir
-
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/paulop2/Rocketpay-NLW4-Elixir?color=%2304D361">
 
@@ -34,30 +12,19 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 	Rocketpay 💸 Concluído 🚀
 </h2>
 
-<p align="center">
- <a href="#-sobre-o-projeto">Sobre</a> •
- <a href="#-funcionalidades">Funcionalidades</a> •
- <a href="#-layout">Layout</a> • 
- <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-tecnologias">Tecnologias</a> • 
- <a href="#-autor">Autor</a> • 
- <a href="#user-content--licença">Licença</a>
-</p>
-
 
 ## 💻 Sobre o projeto
 
-♻️ Ecoleta - é uma forma de conectar empresas e entidades de coleta de resíduos orgânicos e inorgânicos as pessoas que precisam descartar seus resíduos de maneira ecológica.
+🚀💸 Rocketpay - é uma API financeira usando Elixir e Phoenix.
 
 
-Projeto desenvolvido durante a **NLW - Next Level Week** oferecida pela [Rocketseat](https://blog.rocketseat.com.br/primeira-next-level-week/), seguindo a trilha Lauchbase.
+Projeto desenvolvido durante a **NLW - Next Level Week** oferecida pela [Rocketseat](https://blog.rocketseat.com.br/primeira-next-level-week/), seguindo a trilha Elixir.
 O NLW é uma experiência online com muito conteúdo prático, desafios e hacks onde o conteúdo fica disponível durante uma semana.
 
 ---
 
 ## ⚙️ Funcionalidades
 
-- [x] Empresas ou entidades podem se cadastrar na plataforma web enviando:
 - [x] Usuário poderá se cadastrar enviando:
 
   - [x] uma imagem de logo
@@ -70,45 +37,31 @@ O NLW é uma experiência online com muito conteúdo prático, desafios e hacks 
     - [ ] caracteres especiais 
 
 
-  - [x] além de selecionar um ou mais ítens de coleta: 
-    - lâmpadas
-    - pilhas e baterias
-    - papéis e papelão
-    - resíduos eletrônicos
-    - resíduos orgânicos
-    - óleo de cozinha
-
-
-### Web
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/NLW1GIF.gif" width="1000px">
-</p>
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/web1.svg" width="400px">
-
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/sucesso-web.svg" width="400px">
-</p>
-
-
+  - [x] Transações :
+    - [x] Depósito
+    - [x] Saque
+    - [x] Transferência
+    
+  - [ ] Testes cobrindo 100%
 
 ---
 
 ## 🚀 Como executar o projeto
 
-Este projeto é divido em duas partes:
-1. Backend 
 
-2. Frontend
+Este projeto é focado no backend.
 
-💡 O Frontend necessita que o Backend esteja sendo executado para funcionar.
+
 
 ### Pré-requisitos
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: **[Elixir](https://elixir-lang.org/install.html)**, **[Phoenix](https://hexdocs.pm/phoenix/installation.html#phoenix)**, **[Docker](https://www.docker.com/get-started)** e/ou **[Postgres](https://www.postgresql.org/download/)**.
+
+Caso vá utilizar o Postgres pelo Docker, use a imagem abaixo:
+ ```bash
+ docker run --name postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+ ```
+
 
 #### 🎲 Rodando o Backend (servidor)
 
@@ -124,88 +77,19 @@ $ cd Rocketpay-NLW4-Elixir.git
 
 # Instale as dependências
 
-$ npm install
+$ mix deps.get
+
+# Crie e faça as migrações  do seu banco de dados com
+
+$ mix ecto.setup
 
 # Execute a aplicação em modo de desenvolvimento
 
-$ npm run dev:Rocketpay-NLW4-Elixir
+$ mix phx.server
 
-# O servidor inciará na porta:3333 - acesse http://localhost:3333 
-
-```
-
-
-
-
-#### 🧭 Rodando a aplicação web (Frontend)
-
-```bash
-
-# Clone este repositório
-
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
-
-# Acesse a pasta do projeto no seu terminal/cmd
-
-$ cd README-ecoleta
-
-# Vá para a pasta da aplicação Front End
-
-$ cd web
-
-# Instale as dependências
-
-$ npm install
-
-# Execute a aplicação em modo de desenvolvimento
-
-$ npm run start
-
-# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+# O servidor iniciará na porta (http://localhost:4000) no seu navegador 
 
 ```
-
----
-
-## 🛠 Tecnologias
-
-As seguintes ferramentas foram usadas na construção do projeto:
-
-#### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Axios](https://github.com/axios/axios)**
-
-
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/web/package.json)
-
-#### [](https://github.com/tgmarinho/Ecoleta#server-nodejs--typescript)**Server**  ([NodeJS](https://nodejs.org/en/)  +  [TypeScript](https://www.typescriptlang.org/))
-
--   **[Express](https://expressjs.com/)**
--   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
-
--   **[SQLite](https://github.com/mapbox/node-sqlite3)**
-
-
-
-> Veja o arquivo  [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/server/package.json)
-
-
-#### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
-
--   Protótipo:  **[Figma](https://www.figma.com/)**  →  **[Protótipo (Ecoleta)](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta)**
--   API:  **[IBGE API](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1)**  →  **[API de UFs](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet)**,  **[API de Municípios](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-Municipios-estadosUFMunicipiosGet)**
-
--   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  → Extensions:  **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)**
--   Markdown:  **[StackEdit](https://stackedit.io/)**,  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
-
--   Teste de API:  **[Insomnia](https://insomnia.rest/)**
-
--   Ícones:  **[Feather Icons](https://feathericons.com/)**,  **[Font Awesome](https://fontawesome.com/)**
-
--   Fontes:  **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**,  **[Roboto](https://fonts.google.com/specimen/Roboto)**
-
-
-
 ---
 
 
